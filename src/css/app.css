@@ -68,7 +68,3 @@ body {
 #emails-input {
   width: 27.5rem;
 }
-
-#emails-input .emails-input {
-  max-height: 10rem;
-}

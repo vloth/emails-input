@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "vloth <fran.fhb@gmail.com>",
+  "engines": {
+    "node": "^14.0.0"
+  },
   "scripts": {
     "test": "mocha --recursive 'test/**/*.test.js'",
     "lint": "eslint src/js/** && stylelint src/css",

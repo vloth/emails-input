@@ -1,7 +1,7 @@
 /* global lib */
 (function() {
 
-  document.addEventListener('DOMContentLoaded', ()=> {
+  document.addEventListener('DOMContentLoaded', function() {
     const inputContainerNode = document.querySelector('#emails-input')
     const emailsInput = lib.EmailsInput(inputContainerNode)
 
@@ -9,10 +9,10 @@
     window.emailsInput = emailsInput
 
     document.querySelector('[data-action="add-email"]')
-      .addEventListener('click', () => { emailsInput.addEmail(randomEmail()) })
+      .addEventListener('click', function() { emailsInput.addEmail(randomEmail()) })
 
     document.querySelector('[data-action="get-emails-count"]')
-      .addEventListener('click', () => {
+      .addEventListener('click', function() {
         const emails = emailsInput.getEmails()
         alert('there are ' + emails.length + ' valid email(s)')
       })

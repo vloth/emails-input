@@ -30,9 +30,9 @@ lib.EmailsInput = (function() {
 
   EmailsInput.prototype.unmount = function unmount() {
     this._inputContainerNode.innerHTML = ''
-    for (let listener of this._listeners) {
+    this._listeners.forEach(function (listener) {
       this._inputContainerNode.removeEventListener(listener.event, listener.handler, false)
-    }
+    })
     this._listeners = []
   }
 
@@ -108,7 +108,7 @@ lib.EmailsInput = (function() {
 
       const chunks = event.clipboardData.getData('Text').split(options.pasteSplitPattern)
       if (chunks.length > 1) {
-        for (let chunk of chunks) addChip(event.target, chunk)
+        chunks.forEach(function(chunk) { addChip(event.target, chunk) })
         return
       }
 

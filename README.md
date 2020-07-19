@@ -1,4 +1,4 @@
-![Build and Deploy](https://github.com/vloth/emails-input/workflows/Build%20and%20Deploy/badge.svg)
+![Test and Deploy](https://github.com/vloth/emails-input/workflows/Test%20and%20Deploy/badge.svg)
 
 ## Emails Input
 A vanilla js implementation of emails input: a component to help filling emails in.

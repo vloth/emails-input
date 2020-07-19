@@ -87,10 +87,10 @@ lib.EmailsInput = (function() {
     const addEventListener = factory.addEventListener
 
     addEventListener('click', function(event) {
-      if (event.target.matches('.emails-input'))
+      if (event.target.classList.contains('emails-input'))
         event.target.querySelector('input').focus()
 
-      if (event.target.matches('.remove')) {
+      if (event.target.classList.contains('remove')) {
         inputContainerNode.querySelector('.emails-input')
           .removeChild(event.target.parentNode)
       }

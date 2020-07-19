@@ -1,0 +1,21 @@
+{
+  "name": "emails-input",
+  "description": "vanilla js emails input",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "vloth <fran.fhb@gmail.com>",
+  "scripts": {
+    "test": "mocha --recursive 'test/**/*.test.js'",
+    "lint": "eslint src/js/** && stylelint src/css",
+    "test:watch": "npm t -- --reporter min --watch"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^7.21.0",
+    "@testing-library/user-event": "^12.0.11",
+    "eslint": "^7.5.0",
+    "jsdom": "^16.3.0",
+    "mocha": "^8.0.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

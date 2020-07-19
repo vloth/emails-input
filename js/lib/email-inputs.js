@@ -1,6 +1,7 @@
 const lib = window.lib || { }
 
 lib.EmailsInput = (function() {
+  const keycode = { comma: 44, enter: 13, backspace: 8 }
 
   const EmailsInput = function(inputContainerNode, options) {
     this._options = buildOptions(options)
@@ -54,7 +55,7 @@ lib.EmailsInput = (function() {
   function buildOptions(givenOptions) {
     const options = givenOptions || { }
     options.placeholder = options.placeholder || 'add more people ...'
-    options.triggerKeyCodes = options.triggerKeyCodes || [13 /* Enter */, 44 /* Comma */]
+    options.triggerKeyCodes = options.triggerKeyCodes || [keycode.enter, keycode.comma]
     options.pasteSplitPattern = options.pasteSplitPattern || /(?:,| )+/
     return options
   }
@@ -128,7 +129,7 @@ lib.EmailsInput = (function() {
     })
 
     addEventListener('keydown', function(event) {
-      if (event.keyCode === 8 && !event.target.value) {
+      if (event.keyCode === keycode.backspace && !event.target.value) {
         const chips = getChips(inputContainerNode)
         if (!chips.length) return
         const lastChip = chips[chips.length - 1]

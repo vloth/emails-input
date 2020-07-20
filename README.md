@@ -12,6 +12,10 @@ Vanilla js implementation of emails input: a component to help filling emails in
 - works in IE 11 and latest versions of Chrome, Safari, Firefox and Edge;
 - automated tests using jsdom;
 
-### Api
+### Getting started
+```js
+  const inputContainerNode = document.querySelector('#emails-input')
+  const emailsInput = lib.EmailsInput(inputContainerNode)
+```
 
-### Getting starter
+### Api

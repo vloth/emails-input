@@ -19,3 +19,10 @@ Vanilla js implementation of emails input: a component to help filling emails in
 ```
 
 ### Api
+
+-------
+#### Setting up
+`npm install`
+
+#### Testing
+`npm test`

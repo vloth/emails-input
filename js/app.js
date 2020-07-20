@@ -9,11 +9,11 @@
     window.emailsInput = emailsInput
 
     document.querySelector('[data-action="add-email"]')
-      .addEventListener('click', function() { emailsInput.addEmail(randomEmail()) })
+      .addEventListener('click', function() { emailsInput.add(randomEmail()) })
 
     document.querySelector('[data-action="get-emails-count"]')
       .addEventListener('click', function() {
-        const emails = emailsInput.getEmails()
+        const emails = emailsInput.getValue()
         alert('there are ' + emails.length + ' valid email(s)')
       })
   })

@@ -1,6 +1,4 @@
-![Test and Deploy](https://github.com/vloth/emails-input/workflows/Test%20and%20Deploy/badge.svg)
-
-## Emails Input
+## Emails Input  ![Test and Deploy](https://github.com/vloth/emails-input/workflows/Test%20and%20Deploy/badge.svg) 
 Vanilla js implementation of emails input: a component to help filling emails in.
 
 ![screenshot](docs/print.png)
@@ -18,11 +16,6 @@ Vanilla js implementation of emails input: a component to help filling emails in
   const emailsInput = lib.EmailsInput(inputContainerNode)
 ```
 
-### Api
+### API
 
 -------
-#### Setting up
-`npm install`
-
-#### Testing
-`npm test`

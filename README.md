@@ -1,4 +1,3 @@
-
 ## Emails Input &middot; ![Test and Deploy](https://github.com/vloth/emails-input/workflows/Test%20and%20Deploy/badge.svg)
 Vanilla js implementation of emails input: a component to help filling emails in.
 
@@ -65,3 +64,7 @@ Unmounts the component from the dom, and cleans up all handlers:
 ```
 
 [key_code]: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+
+## License
+
+MIT © 2020

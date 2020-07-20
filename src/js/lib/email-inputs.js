@@ -11,12 +11,12 @@ lib.EmailsInput = (function() {
     init(inputContainerNode, this._options)
   }
 
-  EmailsInput.prototype.addEmail = function addEmail(email) {
+  EmailsInput.prototype.add = function add(email) {
     const refElement = this._inputContainerNode.querySelector('input')
     addChip(refElement, email)
   }
 
-  EmailsInput.prototype.getEmails = function getEmails(options) {
+  EmailsInput.prototype.getValue = function getValue(options) {
     const chips = getChips(this._inputContainerNode)
     const includeInvalid = (options || { }).includeInvalid || false
 
@@ -28,10 +28,11 @@ lib.EmailsInput = (function() {
       .map(function(chip) { return chip.firstChild.textContent })
   }
 
-  EmailsInput.prototype.unmount = function unmount() {
-    this._inputContainerNode.innerHTML = ''
+  EmailsInput.prototype.destroy = function destroy() {
+    const inputContainerNode = this._inputContainerNode
+    inputContainerNode.innerHTML = ''
     this._listeners.forEach(function (listener) {
-      this._inputContainerNode.removeEventListener(listener.event, listener.handler, false)
+      inputContainerNode.removeEventListener(listener.event, listener.handler, false)
     })
     this._listeners = []
   }
@@ -42,7 +43,7 @@ lib.EmailsInput = (function() {
     return instance
   }
 
-  /*** private ***/
+  /*** Private functions - access through hoisting ***/
 
   function init(inputContainerNode, options) {
     inputContainerNode.innerHTML = ' \

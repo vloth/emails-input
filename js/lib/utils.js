@@ -9,12 +9,10 @@ lib.utils = (function() {
 
   function randomText(len) { 
     let str = ''
-    const rand='abcdefghijklmnopqrstuvwxyz123456789'
- 
-    for (let i=0; i < len; i++) { 
-      str += rand.charAt(Math.round(rand.length * Math.random()))
+    const sample = 'abcdefghijklmnopqrstuvwxyz123456789'
+    for (let i = 0; i < len; i++) { 
+      str += sample.charAt(Math.round(sample.length * Math.random()))
     }
- 
     return str
   }
 
@@ -35,5 +33,4 @@ lib.utils = (function() {
     random: { email: randomEmail },
     dom: { makeEventListenerFactory: makeEventListenerFactory }
   }
-
 }())

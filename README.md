@@ -3,7 +3,8 @@ Vanilla js implementation of emails input: a component to help filling emails in
 
 ![screenshot](docs/print.png)
 
-[Click here for a live demo](https://vloth.github.io/emails-input/) _(there is a global `emailsInput` object to play with)_.
+[Click here for a live demo](https://vloth.github.io/emails-input/) _(there is a global `emailsInput` object to play with)_    
+or [here](https://vloth.github.io/emails-input/examples.html) to look some examples.
 
 ## Goals
 - vanilla js, zero dependency, no module bundlers, polyfills, libraries or frameworks;

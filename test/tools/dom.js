@@ -10,14 +10,14 @@ class LocalResourceLoader extends ResourceLoader {
 
   async fetch(url, options) {
     if (!url.startsWith(this.basePath))
-      return this.fetchRemote(url, options)
+      return this.fetchExternal(url, options)
 
     const path = url.replace(this.basePath, '')
     const fileContent = await readFile(resolve(path), 'utf-8')
     return Buffer.from(fileContent)
   }
 
-  fetchRemote(url, options) {
+  fetchExternal(url, options) {
     return url.includes('fonts.googleapis.com')
       ? super.fetch(url.replace('file://', 'http://'), options)
       : super.fetch(url, options)

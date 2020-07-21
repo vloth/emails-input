@@ -1,5 +1,5 @@
 ## Emails Input &middot; ![Test and Deploy](https://github.com/vloth/emails-input/workflows/Test%20and%20Deploy/badge.svg)
-Vanilla js implementation of emails input: a component to help filling emails in.
+Vanilla js implementation of emails input: a component to help fill emails in.
 
 ![screenshot](docs/print.png)
 
@@ -8,7 +8,7 @@ or [here](https://vloth.github.io/emails-input/examples.html) to look some examp
 
 ## Goals
 - vanilla js, zero dependency, no module bundlers, polyfills, libraries or frameworks;
-- works in IE 11 and latest versions of Chrome, Safari, Firefox and Edge;
+- works in IE 11 and latest versions of Chrome, Safari, Firefox, and Edge;
 - automated tests using jsdom;
 
 ## API
@@ -34,16 +34,16 @@ Optional config arguments:
 | pasteSplitPattern&ast; | split pattern to be used when pasting a content         | /(?:,\| )+/         |  
 
 
-_&ast;(creating chips on paste only works on browsers that supports the clipboard api, ie: it doesn't support IE11)_
+_&ast;(creating chips on paste only works on browsers that support the clipboard api, ie: it doesn't support IE11)_
 
 ## getValue
 Gets an array of emails. By default, only valid emails will be returned, but an optional argument can be supplied to retrieve all emails:
 ```js
   const emails = emailsInput.getValue()
-  // ["vloth@mail.com", "abc@def.com", "another.email.com"]
+  // ["vloth@mail.com", "abc@def.com", "another@email.com"]
 
   const emails = emailsInput.getValue({ includeInvalid: true })
-  // ["vloth@mail.com", "invalid.user", "abc@def.com", "another.email.com"]
+  // ["vloth@mail.com", "invalid.user", "abc@def.com", "another@email.com"]
 ```
 
 ## add

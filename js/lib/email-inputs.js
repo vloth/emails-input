@@ -1,6 +1,7 @@
-const lib = window.lib || { }
+var lib = window.lib || { }
 
-lib.EmailsInput = (function() {
+lib.EmailsInput = (function(utils) {
+  'use strict'
   const keycode = { comma: 44, enter: 13, backspace: 8 }
 
   const EmailsInput = function(inputContainerNode, options) {
@@ -90,7 +91,7 @@ lib.EmailsInput = (function() {
   }
     
   function setEventListeners(inputContainerNode, options) {
-    const factory = makeEventListenerFactory(inputContainerNode)
+    const factory = utils.dom.makeEventListenerFactory(inputContainerNode)
     const addEventListener = factory.addEventListener
 
     addEventListener('click', function(event) {
@@ -147,17 +148,8 @@ lib.EmailsInput = (function() {
     return factory.handlers
   }
 
-  function makeEventListenerFactory(element) {
-    const handlers = []
-    function addEventListener(event, eventHandler) {
-      const handler = element.addEventListener(event, eventHandler)
-      handlers.push({ event: event, handler: handler })
-    }
-    return { handlers: handlers, addEventListener: addEventListener }
-  }
-
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
-}())
+}(lib.utils))

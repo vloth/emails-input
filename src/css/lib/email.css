@@ -1,4 +1,5 @@
 .emails.emails-input {
+  max-height: inherit;
   border-radius: 0.25rem;
   background: #fff;
   border: 1px solid #c3c2cf;

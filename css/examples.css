@@ -1,0 +1,18 @@
+.examples {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.examples pre {
+  background-color: #f7f7f7;
+}
+
+#sample1,
+#sample2,
+#sample3 {
+  display: block;
+}
+
+#sample2 { max-height: 7rem; }

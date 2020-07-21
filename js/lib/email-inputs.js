@@ -16,6 +16,12 @@ lib.EmailsInput = (function() {
     addChip(refElement, email)
   }
 
+  EmailsInput.prototype.remove = function remove(email) {
+    getChips(this._inputContainerNode)
+      .filter(function(chip) { return chip.firstChild.textContent === email })
+      .forEach(function(chip) { chip.remove() })
+  }
+
   EmailsInput.prototype.getValue = function getValue(options) {
     const chips = getChips(this._inputContainerNode)
     const includeInvalid = (options || { }).includeInvalid || false
@@ -67,7 +73,7 @@ lib.EmailsInput = (function() {
   }
 
   function addChip(refElement, email) {
-    const trimmedEmail = email.trim()
+    const trimmedEmail = email && email.trim()
     if (!trimmedEmail) return
 
     const chip = document.createElement('span')

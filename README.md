@@ -14,7 +14,7 @@ or [here](https://vloth.github.io/emails-input/examples.html) to look some examp
 ## API
 
 - [EmailsInput(node, options)](#emailsinput)
-  - [#getEmails(options)](#getvalue)
+  - [#getValue(options)](#getvalue)
   - [#add(email)](#add)
   - [#remove(email)](#remove)
   - [#unmount()](#unmount)

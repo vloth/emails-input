@@ -17,7 +17,7 @@ or [here](https://vloth.github.io/emails-input/examples.html) to look some examp
   - [#getValue(options)](#getvalue)
   - [#add(email)](#add)
   - [#remove(email)](#remove)
-  - [#unmount()](#unmount)
+  - [#destroy()](#destroy)
 
 
 ## EmailsInput
